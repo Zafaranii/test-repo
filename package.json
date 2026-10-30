@@ -23,7 +23,8 @@
     "build": "vite build --outDir dist/client && vite build --ssr src/entry-server.jsx --outDir dist/server",
     "start": "NODE_ENV=production node server.js",
     "preview": "vite preview",
-    "dev:vite": "vite"
+    "dev:vite": "vite",
+    "build:static": "vite build --outDir dist/client"
   },
   "browserslist": {
     "production": [

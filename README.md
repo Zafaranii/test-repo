@@ -21,6 +21,10 @@ npm run build
 npm start          # http://localhost:3000
 ```
 
+**Vercel / any static host:** the demo needs no server. `vercel.json` builds with `npm run build:static` and serves
+`dist/client` with every unknown path rewritten to `index.html`, so links like `/studios` work on refresh.
+Import the repo in Vercel and deploy with the defaults from `vercel.json`.
+
 Or with Docker: `docker build -t ayg-demo . && docker run -p 3000:3000 ayg-demo`.
 The demo build asks search engines not to index it (`robots.txt` and a `noindex` meta tag).
 

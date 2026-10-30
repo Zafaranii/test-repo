@@ -1,0 +1,443 @@
+/* AYG Theme - Based on Footer Colors */
+:root {
+  /* Primary Colors from Footer Gradient */
+  --primary-black: #000000;
+  --primary-teal: #006d75;
+  --primary-dark-teal: #004d54;
+  --primary-light-teal: #008891;
+  --teal-darker: #003d43;
+  --teal-transparent: rgba(0, 109, 117, 0.1);
+  
+  /* Background Colors */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F5F5F5;
+  --bg-dark: #1A1A1A;
+  --bg-overlay: rgba(0, 0, 0, 0.7);
+  --bg-hover: rgba(0, 109, 117, 0.05);
+  
+  /* Text Colors */
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --text-light: #999999;
+  --text-muted: #CCCCCC;
+  --text-white: #FFFFFF;
+  --text-light-secondary: rgba(255, 255, 255, 0.8);
+  
+  /* Accent Colors */
+  --accent-teal: #006d75;
+  --accent-hover: #004d54;
+  --accent-light: #a5d6d9;
+  
+  /* Status Colors */
+  --status-success: #4CAF50;
+  --status-warning: #FF9800;
+  --status-error: #F44336;
+  --status-info: #006d75;
+  --success: #4CAF50;
+  --warning: #FF9800;
+  --error: #F44336;
+  --info: #006d75;
+  
+  /* Borders & Shadows */
+  --border-light: #E0E0E0;
+  --border-medium: #BDBDBD;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
+  --shadow-teal: 0 4px 12px rgba(0, 109, 117, 0.3);
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Font Sizes */
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-md: 1rem;
+  --font-lg: 1.25rem;
+  --font-xl: 1.5rem;
+  --font-2xl: 2rem;
+  --font-3xl: 2.5rem;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+}
+
+/* Global Brand Styling */
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.brand:hover {
+  transform: scale(1.05);
+}
+
+.brand-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-text {
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: var(--primary-teal);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Utility Classes */
+.btn-primary {
+  background-color: var(--accent-teal);
+  color: var(--text-white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-teal);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 109, 117, 0.4);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--accent-teal);
+  border: 2px solid var(--accent-teal);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent-teal);
+  color: var(--text-white);
+  transform: translateY(-2px);
+}
+
+.card {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-lg);
+  transition: all var(--transition-normal);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-sm);
+  font-weight: 600;
+}
+
+.badge-available {
+  background-color: var(--accent-light);
+  color: var(--accent-hover);
+}
+
+.badge-rented {
+  background-color: #FFE0B2;
+  color: #E65100;
+}
+
+.badge-sold {
+  background-color: #FFCDD2;
+  color: #C62828;
+}
+
+/* Loading Spinner */
+.spinner {
+  border: 3px solid var(--border-light);
+  border-top: 3px solid var(--accent-teal);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  :root {
+    --font-xs: 0.7rem;
+    --font-sm: 0.8rem;
+    --font-md: 0.9rem;
+    --font-lg: 1.1rem;
+    --font-xl: 1.3rem;
+    --font-2xl: 1.75rem;
+    --font-3xl: 2rem;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.875rem 1.25rem;
+    font-size: 15px;
+    min-height: 44px;
+  }
+  
+  .brand-logo {
+    height: 40px;
+  }
+  
+  .brand-text {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-primary,
+  .btn-secondary {
+    padding: 1rem 1rem;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .brand-logo {
+    height: 36px;
+  }
+  
+  .brand-text {
+    font-size: 20px;
+  }
+}
+
+/* Mobile-First Form Styles */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+  padding: 12px 16px;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-md);
+  font-size: 16px; /* Prevents iOS zoom on focus */
+  transition: all var(--transition-fast);
+  width: 100%;
+  font-family: inherit;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-teal);
+  box-shadow: 0 0 0 3px var(--teal-transparent);
+}
+
+/* Touch-friendly buttons */
+button,
+.btn,
+a.btn {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 12px 20px;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  border: none;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+}
+
+.form-group .hint {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 6px;
+  display: block;
+}
+
+.form-group .error {
+  font-size: 13px;
+  color: var(--status-error);
+  margin-top: 6px;
+  display: block;
+}
+
+/* Improved touch targets for mobile */
+@media (max-width: 768px) {
+  button,
+  .btn,
+  a.btn {
+    min-height: 48px;
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  input[type="url"],
+  textarea,
+  select {
+    padding: 14px 16px;
+    font-size: 16px;
+    min-height: 48px;
+  }
+  
+  .form-group {
+    margin-bottom: 24px;
+  }
+  
+  .form-group label {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Accessibility improvements */
+*:focus-visible {
+  outline: 3px solid var(--primary-teal);
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent text size adjustment on mobile */
+body {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Better tap highlighting */
+a, button, input, select, textarea {
+  -webkit-tap-highlight-color: rgba(0, 109, 117, 0.2);
+}
+
+/* ── Inline Delete Confirmation ───────────────────────────────────────────── */
+.delete-confirm-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.delete-confirm-inline span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--status-error);
+  white-space: nowrap;
+}
+
+.confirm-yes-btn {
+  background: var(--status-error) !important;
+  color: #fff !important;
+  border: none !important;
+  padding: 6px 14px !important;
+  border-radius: var(--radius-sm) !important;
+  font-size: 13px !important;
+  min-height: 32px !important;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.confirm-yes-btn:hover {
+  background: #c62828 !important;
+}
+
+.confirm-no-btn {
+  background: transparent !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid var(--border-medium) !important;
+  padding: 6px 14px !important;
+  border-radius: var(--radius-sm) !important;
+  font-size: 13px !important;
+  min-height: 32px !important;
+  cursor: pointer;
+}
+
+.confirm-no-btn:hover {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}

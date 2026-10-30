@@ -1,0 +1,122 @@
+.whatsapp-button-container {
+  width: 100%;
+}
+
+.whatsapp-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.whatsapp-button {
+  background: #25D366;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  width: 100%;
+  justify-content: center;
+}
+
+.whatsapp-button:hover {
+  background: #128C7E;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+/* Customer contact styling - distinct color for admin use */
+.whatsapp-button.whatsapp-customer {
+  background: #0088cc;
+  position: relative;
+}
+
+.whatsapp-button.whatsapp-customer::before {
+  content: '👤';
+  margin-right: 4px;
+}
+
+.whatsapp-button.whatsapp-customer:hover {
+  background: #006699;
+  box-shadow: 0 4px 12px rgba(0, 136, 204, 0.3);
+}
+
+/* Agency contact styling */
+.whatsapp-button.whatsapp-agency {
+  background: #25D366;
+}
+
+.whatsapp-icon {
+  font-size: 18px;
+}
+
+.whatsapp-text {
+  flex: 1;
+  text-align: center;
+}
+
+/* Contact info header styling */
+.contact-info-header {
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #0088cc;
+}
+
+.contact-info-header h4 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #0088cc;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact-info-header .contact-name {
+  margin: 4px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-info-header .contact-phone {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: #666;
+  font-family: monospace;
+  direction: ltr;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  
+  .contact-info-header {
+    padding: 10px;
+  }
+  
+  .contact-info-header h4 {
+    font-size: 12px;
+  }
+  
+  .contact-info-header .contact-name {
+    font-size: 14px;
+  }
+  
+  .contact-info-header .contact-phone {
+    font-size: 13px;
+  }
+}

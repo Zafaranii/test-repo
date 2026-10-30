@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Placeholder photo: Entrance">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a5d5a"/>
+      <stop offset="1" stop-color="#5ab0a8"/>
+    </linearGradient>
+    <pattern id="p" width="60" height="60" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <rect width="60" height="60" fill="none"/>
+      <rect width="2" height="60" fill="#ffffff" fill-opacity="0.06"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="900" fill="url(#g)"/>
+  <rect width="1200" height="900" fill="url(#p)"/>
+  <g transform="translate(492 235) scale(0.9)" fill="none" stroke="#ffffff" stroke-opacity="0.92" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="60" y="20" width="120" height="200" rx="8"/>
+    <rect x="82" y="44" width="76" height="68" rx="4"/>
+    <rect x="82" y="126" width="76" height="70" rx="4"/>
+    <circle cx="148" cy="164" r="7"/>
+    <path d="M30 220h180"/>
+  </g>
+  <text x="600" y="520" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff">Entrance</text>
+  <text x="600" y="568" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" letter-spacing="6" fill="#ffffff" fill-opacity="0.75">PLACEHOLDER PHOTO</text>
+</svg>

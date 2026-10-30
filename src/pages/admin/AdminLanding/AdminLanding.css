@@ -1,0 +1,367 @@
+/* Admin Landing Page - Same styling as original landing page */
+.admin-landing {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: radial-gradient(1200px 600px at 20% 20%, #f0f7ff 0%, transparent 60%), radial-gradient(800px 400px at 85% 25%, #fff7ed 0%, transparent 60%), #ffffff;
+}
+
+.admin-hero {
+  position: relative;
+  min-height: 78vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background-size: cover;
+  background-position: center;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+  overflow: hidden;
+}
+
+.admin-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.35) 40%, rgba(0,0,0,.55));
+}
+
+.admin-landing__nav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  color: #fff;
+}
+
+.back-link {
+  color: black;
+  background: transparent;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  background: rgba(255,255,255,0.1);
+  color: var(--primary-teal);
+  transform: scale(1.05);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.brand:hover {
+  transform: scale(1.05);
+}
+
+.brand-logo {
+  height: 50px;
+  width: auto;
+}
+
+/* Hero overlay: white logo matting blends with background */
+.admin-landing__nav .brand-logo {
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.brand-text {
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: var(--primary-teal);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-landing__container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 16px;
+  align-content: center;
+  padding: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+}
+
+.admin-landing__header {
+  margin-bottom: 40px;
+}
+
+.admin-landing__header h1 {
+  font-size: clamp(32px, 6vw, 64px);
+  line-height: 1.05;
+  margin: 12px 0;
+  color: #fff;
+}
+
+.admin-accent {
+  color: var(--primary-teal);
+  font-weight: 900;
+}
+
+.admin-landing__header p {
+  color: #e5e7eb;
+  max-width: 70ch;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.admin-options {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+.admin-option-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 12px 28px rgba(0,0,0,.08);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.admin-option-card:hover {
+  transform: scale(1.05);
+  transition: all .7s ease;
+  box-shadow: 0 12px 28px rgba(0, 188, 212, 0.8);
+  text-decoration: none;
+  color: inherit;
+}
+
+.admin-option-icon {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.admin-option-card h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: #111827;
+  text-align: center;
+}
+
+.admin-option-card p {
+  margin: 0;
+  color: #6b7280;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.admin-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.admin-features li {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.admin-features li:before {
+  content: "✓";
+  color: var(--primary-teal);
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.admin-option-btn {
+  background: var(--primary-teal);
+  color: #111827;
+  font-weight: 700;
+  border: 0;
+  padding: 16px 32px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+}
+
+.admin-btn:hover,
+.master-admin-btn:hover,
+.admin-option-btn:hover {
+  background: var(--primary-dark-teal);
+  transform: scale(0.95);
+  transition: all .3s ease;
+  box-shadow: 0 8px 20px rgba(0, 188, 212, 0.6);
+  text-decoration: none;
+  color: #111827;
+}
+
+.admin-btn {
+  background: var(--primary-teal);
+  color: #111827;
+}
+
+.master-admin-btn {
+  background: var(--primary-teal);
+  color: #111827;
+}
+
+.admin-landing__footer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  padding: 24px;
+  border-top: 1px solid #f3f4f6;
+}
+
+.admin-landing__footer .sep {
+  color: #d1d5db;
+}
+
+.admin-landing__footer p {
+  margin: 0;
+  text-align: center;
+}
+
+.admin-landing__footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.admin-landing__footer a:hover {
+  color: #111827;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-landing__nav {
+    padding: 12px 16px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .brand {
+    font-size: 16px;
+  }
+  
+  .brand-logo {
+    height: 40px;
+  }
+  
+  .brand-text {
+    font-size: 24px;
+  }
+  
+  .admin-landing__container {
+    padding: 40px 16px;
+  }
+  
+  .admin-landing__header h1 {
+    font-size: clamp(28px, 5vw, 48px);
+  }
+  
+  .admin-landing__header p {
+    font-size: 16px;
+  }
+  
+  .admin-options {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 40px;
+    max-width: 100%;
+  }
+  
+  .admin-option-card {
+    padding: 25px 15px;
+    min-width: auto;
+  }
+  
+  .admin-option-icon {
+    font-size: 48px;
+  }
+  
+  .admin-option-card h2 {
+    font-size: 24px;
+  }
+  
+  .admin-option-card p {
+    font-size: 15px;
+  }
+  
+  .admin-option-btn {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-landing__nav {
+    padding: 10px 12px;
+  }
+  
+  .brand-logo {
+    height: 36px;
+  }
+  
+  .brand-text {
+    font-size: 20px;
+  }
+  
+  .admin-landing__container {
+    padding: 30px 12px;
+  }
+  
+  .admin-landing__header h1 {
+    font-size: clamp(24px, 6vw, 36px);
+  }
+  
+  .admin-landing__header p {
+    font-size: 14px;
+  }
+  
+  .admin-option-card {
+    padding: 20px 12px;
+  }
+  
+  .admin-option-icon {
+    font-size: 40px;
+  }
+  
+  .admin-option-card h2 {
+    font-size: 20px;
+  }
+  
+  .admin-option-card p {
+    font-size: 14px;
+  }
+  
+  .admin-option-btn {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+}

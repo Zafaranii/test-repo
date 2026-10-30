@@ -1,0 +1,556 @@
+/* Apartment Sale Details Page Styles */
+.apartment-sale-details-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Navigation */
+.apartment-nav {
+  background: white;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.back-link {
+  color: #6b7280;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #374151;
+}
+
+.brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-teal);
+  text-decoration: none;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Main Container */
+.apartment-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+/* Gallery Section */
+.apartment-gallery-section {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Content Layout */
+.apartment-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Main Info */
+.apartment-main-info {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Header */
+.apartment-header {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.apartment-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.apartment-price {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #dc2626;
+  margin-bottom: 12px;
+}
+
+.apartment-status {
+  margin-top: 12px;
+}
+
+.status-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.available {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.status-badge.sold {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Location */
+.apartment-location {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #6b7280;
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.apartment-location:hover {
+  color: #374151;
+}
+
+.location-link {
+  color: #3b82f6;
+  font-size: 0.875rem;
+  text-decoration: underline;
+}
+
+.apartment-posted {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+/* Creator Info Section */
+.creator-info-section {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 24px 0;
+}
+
+.creator-info,
+.creator-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.creator-info:last-child,
+.creator-date:last-child {
+  margin-bottom: 0;
+}
+
+.creator-label {
+  font-weight: 600;
+  color: #166534;
+}
+
+.creator-value {
+  font-weight: 500;
+  color: #15803d;
+}
+
+/* Highlights Section */
+.highlights-section {
+  margin: 32px 0;
+}
+
+.highlights-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.highlight-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.highlight-content {
+  flex: 1;
+}
+
+.highlight-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.highlight-value {
+  font-size: 1rem;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* Details Section */
+.details-section {
+  margin: 32px 0;
+}
+
+.details-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.details-table {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #6b7280;
+  flex: 1;
+}
+
+.detail-value {
+  font-weight: 500;
+  color: #1f2937;
+  text-align: right;
+  flex: 1;
+}
+
+/* Facilities Section */
+.facilities-section {
+  margin: 32px 0;
+}
+
+.facilities-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.facility-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background: #f0fdf4;
+  border-radius: 8px;
+  border: 1px solid #bbf7d0;
+}
+
+.facility-icon {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.facility-name {
+  color: #166534;
+  font-weight: 500;
+}
+
+/* Description Section */
+.description-section {
+  margin: 32px 0;
+}
+
+.description-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.description-text {
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Location Section */
+.location-section {
+  margin: 32px 0;
+}
+
+.location-section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.location-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.location-text {
+  font-size: 1.125rem;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.location-button {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.location-button:hover {
+  background: #2563eb;
+}
+
+.interactive-map {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.map-placeholder {
+  background: #f3f4f6;
+  padding: 40px;
+  text-align: center;
+  color: #6b7280;
+}
+
+/* Sidebar */
+.apartment-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: sticky;
+  top: 120px;
+}
+
+/* Contact Card */
+.contact-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 16px;
+}
+
+.agency-info {
+  margin-bottom: 20px;
+}
+
+.agency-name {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.agency-rating {
+  color: var(--primary-teal);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.agency-member {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Price Summary Card */
+.price-summary-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid #fee2e2;
+}
+
+.price-summary-card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 16px;
+}
+
+.price-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.price-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: #fef2f2;
+  border-radius: 8px;
+}
+
+.price-label {
+  font-weight: 600;
+  color: #991b1b;
+}
+
+.price-value {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #dc2626;
+}
+
+.price-note {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .apartment-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .apartment-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .apartment-container {
+    padding: 16px;
+    gap: 20px;
+  }
+  
+  .apartment-main-info {
+    padding: 20px;
+  }
+  
+  .apartment-title {
+    font-size: 1.5rem;
+  }
+  
+  .apartment-price {
+    font-size: 2rem;
+  }
+  
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .facilities-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .location-info {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  
+  .apartment-nav {
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .apartment-location {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .detail-value {
+    text-align: left;
+  }
+  
+  .contact-card,
+  .price-summary-card {
+    padding: 16px;
+  }
+}

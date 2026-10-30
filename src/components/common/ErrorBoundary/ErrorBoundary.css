@@ -1,0 +1,248 @@
+.error-boundary {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 12px;
+  margin: 2rem 0;
+}
+
+.error-boundary-content {
+  text-align: center;
+  max-width: 500px;
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.error-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.error-boundary h2 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.error-boundary p {
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.error-details {
+  text-align: left;
+  margin: 2rem 0;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.error-details summary {
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #495057;
+}
+
+.error-details summary:hover {
+  color: var(--primary-teal);
+}
+
+.error-stack {
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: #666;
+  white-space: pre-wrap;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.error-actions .btn {
+  min-width: 120px;
+}
+
+/* Loading container styles */
+.loading-container {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.loading-container p {
+  margin-top: 1rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Error container styles */
+.error-container {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.error-content {
+  text-align: center;
+  max-width: 500px;
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #dc3545;
+}
+
+.error-content h2 {
+  color: #dc3545;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.error-content p {
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.error-content .btn {
+  margin: 0.5rem;
+}
+
+/* Empty state styles */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #666;
+}
+
+.empty-state h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.empty-state p {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.empty-state .btn {
+  margin-top: 1rem;
+}
+
+/* Toast notification styles */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  min-width: 300px;
+  max-width: 500px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.toast-success {
+  border-left: 4px solid #28a745;
+}
+
+.toast-error {
+  border-left: 4px solid #dc3545;
+}
+
+.toast-warning {
+  border-left: 4px solid #ffc107;
+}
+
+.toast-info {
+  border-left: 4px solid #17a2b8;
+}
+
+.toast-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.toast-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.toast-message {
+  color: #333;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .error-boundary-content,
+  .error-content {
+    padding: 2rem 1rem;
+    margin: 1rem;
+  }
+  
+  .error-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .error-actions .btn {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .toast {
+    right: 10px;
+    left: 10px;
+    width: auto;
+    min-width: auto;
+  }
+}

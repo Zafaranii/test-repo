@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Placeholder photo: Balcony">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#34508a"/>
+      <stop offset="1" stop-color="#6c8fcf"/>
+    </linearGradient>
+    <pattern id="p" width="60" height="60" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <rect width="60" height="60" fill="none"/>
+      <rect width="2" height="60" fill="#ffffff" fill-opacity="0.06"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="900" fill="url(#g)"/>
+  <rect width="1200" height="900" fill="url(#p)"/>
+  <g transform="translate(492 235) scale(0.9)" fill="none" stroke="#ffffff" stroke-opacity="0.92" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="180" cy="62" r="30"/>
+    <path d="M180 14v-8M180 118v-8M132 62h-8M236 62h-8M146 28l-6-6M214 96l6 6M214 28l6-6M146 96l-6 6"/>
+    <path d="M10 130h220"/>
+    <path d="M10 210h220"/>
+    <path d="M30 130v80M70 130v80M110 130v80M150 130v80M190 130v80"/>
+    <rect x="10" y="130" width="220" height="80" rx="4"/>
+  </g>
+  <text x="600" y="520" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff">Balcony</text>
+  <text x="600" y="568" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" letter-spacing="6" fill="#ffffff" fill-opacity="0.75">PLACEHOLDER PHOTO</text>
+</svg>

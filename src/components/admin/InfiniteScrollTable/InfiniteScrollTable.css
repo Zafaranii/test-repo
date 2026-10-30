@@ -1,0 +1,265 @@
+/* Infinite Scroll Table Styles */
+.infinite-scroll-table {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.infinite-scroll-table.empty {
+  padding: 40px;
+  text-align: center;
+}
+
+.empty-state p {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Progress Bar */
+.progress-bar {
+  position: relative;
+  background: #f0f0f0;
+  border-radius: 10px;
+  height: 6px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-teal), var(--primary-dark-teal));
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+.progress-text {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Table Container */
+.table-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+}
+
+.admin-table thead {
+  background: #f8f9fa;
+}
+
+.admin-table th {
+  padding: 15px 20px;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.admin-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.admin-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.admin-table tbody tr:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.admin-table td {
+  padding: 15px 20px;
+  vertical-align: middle;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Loading More */
+.loading-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* Load More Button */
+.load-more-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.load-more-btn {
+  background: var(--primary-teal);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.load-more-btn:hover {
+  background: var(--primary-dark-teal);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.load-more-btn:active {
+  transform: translateY(0);
+}
+
+/* End Message */
+.end-message {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 14px;
+  border-top: 1px solid #eee;
+  background: #f8f9fa;
+  border-radius: 0 0 8px 8px;
+}
+
+.end-message p {
+  margin: 0;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-table th,
+  .admin-table td {
+    padding: 10px 15px;
+    font-size: 13px;
+  }
+
+  .progress-text {
+    font-size: 11px;
+  }
+
+  .load-more-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-table {
+    font-size: 12px;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 8px 12px;
+  }
+
+  .table-container {
+    margin: 0 -10px;
+    border-radius: 0;
+  }
+}
+
+/* Animation for new rows */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.table-row {
+  animation: fadeInUp 0.3s ease;
+}
+
+/* Status badges */
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.active {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-badge.inactive {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.status-badge.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.action-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.action-btn.edit {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.action-btn.edit:hover {
+  background: #bbdefb;
+}
+
+.action-btn.delete {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+.action-btn.delete:hover {
+  background: #ffcdd2;
+}
+
+.action-btn.view {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.action-btn.view:hover {
+  background: #e1bee7;
+}

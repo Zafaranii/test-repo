@@ -1,0 +1,107 @@
+/* Standardized Back Button Component Styles */
+
+.back-button {
+  /* Base styles */
+  background: rgba(0, 188, 212, 0.2);
+  border: 1px solid rgba(0, 188, 212, 0.4);
+  color: var(--primary-teal);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  min-height: 36px;
+  
+  /* Reset button defaults */
+  outline: none;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.back-button:hover {
+  background: rgba(0, 188, 212, 0.3);
+  border-color: rgba(0, 188, 212, 0.6);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 188, 212, 0.2);
+}
+
+.back-button:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 4px rgba(0, 188, 212, 0.3);
+}
+
+.back-button:focus {
+  outline: 2px solid rgba(0, 188, 212, 0.5);
+  outline-offset: 2px;
+}
+
+/* Variants */
+.back-button--transparent {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.back-button--transparent:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-button--link {
+  background: transparent;
+  border: none;
+  color: var(--primary-teal);
+  padding: 4px 8px;
+  text-decoration: none;
+}
+
+.back-button--link:hover {
+  background: rgba(0, 123, 255, 0.1);
+  color: var(--primary-dark-teal);
+  transform: none;
+  box-shadow: none;
+}
+
+.back-button--primary {
+  background: var(--primary-teal);
+  border: 1px solid var(--primary-teal);
+  color: white;
+}
+
+.back-button--primary:hover {
+  background: var(--primary-dark-teal);
+  border-color: var(--primary-dark-teal);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Disabled state */
+.back-button--disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .back-button {
+    font-size: 13px;
+    padding: 6px 12px;
+    min-height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-button {
+    font-size: 12px;
+    padding: 5px 10px;
+    min-height: 30px;
+  }
+}

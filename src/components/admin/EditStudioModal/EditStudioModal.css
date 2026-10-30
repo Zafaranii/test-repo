@@ -1,0 +1,178 @@
+/* Edit Studio Modal Styles - Centered Modal */
+@import '../AddStudioModal/AddStudioModal.css';
+
+.edit-studio-modal {
+  background: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+.edit-studio-modal .modal-header {
+  background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-teal) 50%, var(--primary-dark-teal) 100%);
+  color: white;
+  padding: 20px 24px;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: none;
+  min-height: 60px;
+  border-radius: 12px 12px 0 0;
+}
+
+.edit-studio-modal .modal-header h2 {
+  color: white;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.edit-studio-modal .modal-header p,
+.edit-studio-modal .modal-subtitle {
+  display: none; /* Hide subtitle to match manage admin style */
+}
+
+.edit-studio-modal .close-btn {
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  border: 2px solid #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  outline: none;
+}
+
+.edit-studio-modal .close-btn:hover {
+  background: rgba(255,255,255,0.35);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.edit-studio-modal .close-btn:active {
+  transform: scale(0.95);
+}
+
+.edit-studio-modal .studio-form {
+  padding: 30px 40px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9998;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Responsive adjustments for centered modal */
+@media (max-width: 768px) {
+  .edit-studio-modal {
+    width: 95%;
+    max-height: 95vh;
+  }
+  
+  .edit-studio-modal .studio-form {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .edit-studio-modal {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    max-height: 100vh;
+  }
+  
+  .edit-studio-modal .modal-header {
+    border-radius: 0;
+  }
+  
+  .edit-studio-modal .studio-form {
+    padding: 16px;
+  }
+  
+  .modal-overlay {
+    padding: 0;
+  }
+}
+
+/* Existing / new photo thumbnails */
+.photo-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+  padding: 15px;
+  background: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.photo-preview-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.photo-preview-image {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.photo-remove-btn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.photo-remove-btn:hover {
+  background: #dc2626;
+  transform: scale(1.1);
+}
+

@@ -1,0 +1,244 @@
+/* Studio Mini Card Styles */
+
+.studio-mini-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  pointer-events: auto;
+}
+
+.studio-mini-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-teal);
+}
+
+.studio-mini-card.occupied {
+  opacity: 0.8;
+  background: #f9fafb;
+}
+
+.studio-mini-header {
+  position: relative;
+}
+
+.studio-mini-image {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.studio-status-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.status-indicator {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-indicator.available {
+  background: rgba(16, 185, 129, 0.9);
+  color: white;
+}
+
+.status-indicator.occupied {
+  background: rgba(239, 68, 68, 0.9);
+  color: white;
+}
+
+.studio-mini-content {
+  padding: 20px;
+}
+
+.studio-mini-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.studio-mini-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.studio-unit,
+.studio-floor,
+.studio-area {
+  background: #f3f4f6;
+  color: #6b7280;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.studio-price {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-teal);
+  margin-top: 8px;
+}
+
+.studio-mini-actions {
+  display: flex;
+  padding: 16px 20px;
+  gap: 16px;
+  border-top: 1px solid #e5e7eb;
+  background: #f9fafb;
+  justify-content: center;
+}
+
+.action-btn {
+  background: #f3f4f6;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.action-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.edit-btn:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+.toggle-btn.make-occupied:hover {
+  background: #ef4444;
+  color: white;
+}
+
+.toggle-btn.make-available:hover {
+  background: #10b981;
+  color: white;
+}
+
+.delete-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Delete Confirmation Overlay */
+.delete-confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  pointer-events: auto;
+}
+
+.delete-confirm-dialog {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.delete-confirm-dialog h4 {
+  color: #ef4444;
+  font-size: 18px;
+  margin: 0 0 8px 0;
+}
+
+.delete-confirm-dialog p {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0 0 20px 0;
+}
+
+.delete-confirm-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.confirm-cancel-btn,
+.confirm-delete-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.confirm-cancel-btn {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.confirm-cancel-btn:hover {
+  background: #e5e7eb;
+}
+
+.confirm-delete-btn {
+  background: #ef4444;
+  color: white;
+}
+
+.confirm-delete-btn:hover {
+  background: #dc2626;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .studio-mini-image {
+    height: 100px;
+  }
+
+  .studio-mini-content {
+    padding: 12px;
+  }
+
+  .studio-mini-title {
+    font-size: 13px;
+  }
+
+  .studio-price {
+    font-size: 14px;
+  }
+
+  .action-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+}

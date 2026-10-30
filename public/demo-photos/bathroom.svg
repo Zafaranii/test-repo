@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Placeholder photo: Bathroom">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1d5a6e"/>
+      <stop offset="1" stop-color="#4f9bb0"/>
+    </linearGradient>
+    <pattern id="p" width="60" height="60" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <rect width="60" height="60" fill="none"/>
+      <rect width="2" height="60" fill="#ffffff" fill-opacity="0.06"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="900" fill="url(#g)"/>
+  <rect width="1200" height="900" fill="url(#p)"/>
+  <g transform="translate(492 235) scale(0.9)" fill="none" stroke="#ffffff" stroke-opacity="0.92" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 120h200v36a46 46 0 0 1-46 46H66a46 46 0 0 1-46-46z"/>
+    <path d="M50 202l-10 20M190 202l10 20"/>
+    <path d="M60 120V70a30 30 0 0 1 60 0"/>
+    <path d="M120 40h22"/>
+    <path d="M150 70v14M162 76v14M138 76v14"/>
+  </g>
+  <text x="600" y="520" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff">Bathroom</text>
+  <text x="600" y="568" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" letter-spacing="6" fill="#ffffff" fill-opacity="0.75">PLACEHOLDER PHOTO</text>
+</svg>

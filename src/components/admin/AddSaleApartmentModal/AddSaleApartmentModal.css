@@ -1,0 +1,483 @@
+/* Sale Apartment Modal Styles */
+.add-sale-apartment-modal {
+  background: white;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.add-sale-apartment-modal .modal-header {
+  background: linear-gradient(135deg, var(--primary-teal) 0%, var(--primary-teal) 50%, var(--primary-dark-teal) 100%);
+  color: white;
+  padding: 20px 24px;
+  border-radius: 20px 20px 0 0;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: none;
+  min-height: 60px;
+}
+
+.add-sale-apartment-modal .modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+.add-sale-apartment-modal .modal-header p {
+  display: none; /* Hide subtitle to match manage admin style */
+}
+
+.add-sale-apartment-modal .close-btn {
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  border: 2px solid #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  outline: none;
+}
+
+.add-sale-apartment-modal .close-btn:hover {
+  background: rgba(255,255,255,0.35);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.add-sale-apartment-modal .close-btn:active {
+  transform: scale(0.95);
+}
+
+.sale-apartment-form {
+  padding: 30px;
+}
+
+.sale-apartment-form .form-group {
+  margin-bottom: 25px;
+}
+
+.sale-apartment-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.sale-apartment-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 14px;
+}
+
+.sale-apartment-form input,
+.sale-apartment-form textarea,
+.sale-apartment-form select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.sale-apartment-form input:focus,
+.sale-apartment-form textarea:focus,
+.sale-apartment-form select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.sale-apartment-form input.error,
+.sale-apartment-form textarea.error,
+.sale-apartment-form select.error {
+  border-color: #f56565;
+  box-shadow: 0 0 0 3px rgba(245, 101, 101, 0.1);
+}
+
+.sale-apartment-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.error-text {
+  color: #f56565;
+  font-size: 14px;
+  margin-top: 5px;
+  display: block;
+}
+
+.error-message {
+  background: #fed7d7;
+  color: #c53030;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.contact-hint {
+  font-size: 14px;
+  color: #718096;
+  margin-top: 8px;
+  padding: 12px;
+  background: #f7fafc;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+/* Photo Upload Styles */
+.photo-upload-container {
+  position: relative;
+  border: 2px dashed #cbd5e0;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.photo-upload-container:hover {
+  border-color: #667eea;
+  background: #f8f9ff;
+}
+
+.photo-upload-input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.photo-upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.upload-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.upload-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.upload-text strong {
+  font-size: 16px;
+  color: #2d3748;
+}
+
+.upload-text span {
+  font-size: 14px;
+  color: #718096;
+}
+
+.upload-hint {
+  font-size: 12px;
+  color: #a0aec0;
+  margin-top: 10px;
+}
+
+.photo-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.photo-preview-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f7fafc;
+  border: 2px solid #e2e8f0;
+}
+
+.photo-preview-image {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-remove-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: rgba(245, 101, 101, 0.9);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-remove-btn:hover {
+  background: #f56565;
+}
+
+.photo-name {
+  padding: 8px;
+  font-size: 11px;
+  color: #4a5568;
+  background: white;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Map Styles */
+.map-hint {
+  font-size: 14px;
+  color: #718096;
+  margin-bottom: 15px;
+  padding: 12px;
+  background: #f0fff4;
+  border-radius: 8px;
+  border-left: 4px solid #38a169;
+}
+
+.coordinates-display {
+  margin: 10px 0;
+  padding: 8px 12px;
+  background: #f7fafc;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.coordinates-display small {
+  color: #4a5568;
+  font-family: monospace;
+}
+
+.map-section {
+  margin-top: 15px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #e2e8f0;
+}
+
+/* Facility Styles */
+.facility-input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.facility-input {
+  flex: 1;
+  margin-bottom: 0 !important;
+}
+
+.add-facility-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.add-facility-btn:hover {
+  background: #5a67d8;
+  transform: translateY(-1px);
+}
+
+.common-facilities {
+  margin-bottom: 20px;
+}
+
+.common-facilities p {
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.facility-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.facility-suggestion {
+  background: #edf2f7;
+  border: 1px solid #e2e8f0;
+  color: #4a5568;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.facility-suggestion:hover:not(:disabled) {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.facility-suggestion:disabled {
+  background: #f7fafc;
+  color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.selected-facilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.selected-facility {
+  background: #667eea;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.remove-facility {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.remove-facility:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Modal Actions */
+.modal-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 30px;
+}
+
+.cancel-btn {
+  background: #edf2f7;
+  color: #4a5568;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.cancel-btn:hover {
+  background: #e2e8f0;
+  transform: translateY(-1px);
+}
+
+.submit-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add-sale-apartment-modal {
+    width: 95%;
+    max-height: 95vh;
+  }
+
+  .add-sale-apartment-modal .modal-header {
+    padding: 20px;
+  }
+
+  .add-sale-apartment-modal .modal-header h2 {
+    font-size: 24px;
+  }
+
+  .sale-apartment-form {
+    padding: 20px;
+  }
+
+  .sale-apartment-form .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .photo-preview-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+  }
+
+  .facility-input-section {
+    flex-direction: column;
+  }
+
+  .modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .cancel-btn,
+  .submit-btn {
+    width: 100%;
+  }
+}
